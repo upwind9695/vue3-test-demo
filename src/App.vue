@@ -1,22 +1,22 @@
 <script lang="ts" setup>
-import {onMounted} from "vue"
-import {useUserStoreHook} from "./stores/modules/user.ts"
-import {getUserById} from "./api/user"
+import { onMounted } from 'vue';
+import { useUserStoreHook } from './stores/modules/user.ts';
+import { getUserById } from './api/user';
 
-const user = useUserStoreHook()
+const user = useUserStoreHook();
 
 onMounted(async () => {
-  const u = await getUserById(1)
-  user.setToken(u.email)
-  user.setUserId(u.id)
-  user.setUsername(u.name)
-})
+  const u = await getUserById(1);
+  user.setToken(u.email);
+  user.setUserId(u.id);
+  user.setUsername(u.name);
+});
 </script>
 
 <template>
   <div>
     <a href="https://vuejs.org/" target="_blank">
-      <img alt="Vue logo" class="logo vue" src="./assets/vue.svg"/>
+      <img alt="Vue logo" class="logo vue" src="./assets/vue.svg" />
     </a>
   </div>
 </template>

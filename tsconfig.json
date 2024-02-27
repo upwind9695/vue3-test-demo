@@ -1,29 +1,43 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "allowJs": true,
+    "target": "esnext",
     "useDefineForClassFields": true,
-    "module": "ESNext",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "skipLibCheck": true,
-
-    /* Bundler mode */
+    "module": "esnext",
     "moduleResolution": "node",
-    "allowImportingTsExtensions": true,
+    "strict": false,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
-    "baseUrl": "./",
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "skipLibCheck": true,
+    "types": [
+      "node",
+      "vite/client",
+      "element-plus/global",
+      "vitest",
+      "vitest/globals",
+      "unplugin-vue-define-options/macros-global"
+    ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
-    },
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+      "@/*": ["src/*"]
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "types/**/*.d.ts",
+    "vite.config.ts",
+    "vitest.config.ts"
+  ],
+  "exclude": ["node_modules", "dist"]
 }
