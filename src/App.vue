@@ -1,16 +1,16 @@
 <script lang="ts" setup>
-import { onMounted } from 'vue';
-import { useUserStoreHook } from './stores/modules/user.ts';
-import { getUserById } from './api/user';
+import { onMounted } from 'vue'
+import { useUserStoreHook } from './stores/modules/user.ts'
+import { getUserById } from './api/user'
 
-const user = useUserStoreHook();
+const user = useUserStoreHook()
 
 onMounted(async () => {
-  const u = await getUserById(1);
-  user.setToken(u.email);
-  user.setUserId(u.id);
-  user.setUsername(u.name);
-});
+  const u = await getUserById(1)
+  user.setToken(u.email)
+  user.setUserId(u.id)
+  user.setUsername(u.name)
+})
 </script>
 
 <template>

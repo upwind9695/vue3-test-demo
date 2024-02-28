@@ -7,7 +7,7 @@ export default [
         id: '0001',
         name: '小明',
         email: '3333@qq.com',
-      };
+      }
     },
   },
 
@@ -30,7 +30,7 @@ export default [
           },
         ],
         msg: 'success',
-      };
+      }
     },
   },
-];
+]
