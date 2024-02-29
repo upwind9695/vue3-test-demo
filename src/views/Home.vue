@@ -1,7 +1,9 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import AILabelMap from "@/components/aiLabel/index.vue"
+</script>
 
 <template>
-  <div>Home</div>
+    <AILabelMap/>
 </template>
 
 <style scoped></style>
