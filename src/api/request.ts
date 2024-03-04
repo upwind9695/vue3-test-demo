@@ -78,6 +78,7 @@ const createRequest = (service: AxiosInstance) => {
     const configDefault = {
       headers: {
         Authorization: '',
+        Local: 'en',
         'Content-Type': get(config, 'headers.Content-Type', 'application/json'),
       },
       timeout: 0,

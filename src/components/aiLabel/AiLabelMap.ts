@@ -1,5 +1,4 @@
 import AILabel from 'ailabel'
-import { Ref } from "vue"
 import { AI_LABEL_MAP_MODE_ENUM, AiLabelMapOptionsType } from "@/constants/type"
 export class AiLabelMap {
   container: string = ""
@@ -58,8 +57,8 @@ export class AiLabelMap {
   #addImageLayer() {
     const gImageLayer = new AILabel.Layer.Image('imgLayer', {
       src: this.imageSrc,
-      width: 1080,
-      height: 720,
+      width: "100%",
+      height: "100%",
     });
     this.gMap.addLayer(gImageLayer);
   }

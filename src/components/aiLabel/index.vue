@@ -13,20 +13,20 @@
 <template>
   <div class="map-wrap">
     <div class="map-actions">
-      <el-button type="text" class="el-icon-thumb">平移</el-button>
-      <el-button type="text" class="el-icon-location-outline">注记</el-button>
-      <el-button type="text" class="el-icon-more-outline">点</el-button>
-      <el-button type="text" class="el-icon-minus">线段</el-button>
-      <el-button type="text" class="el-icon-share">多段线</el-button>
-      <el-button type="text" class="el-icon-orange">圆</el-button>
-      <el-button type="text" class="el-icon-full-screen">矩形</el-button>
-      <el-button type="text" class="el-icon-house">多边形</el-button>
-      <el-button type="text" class="el-icon-magic-stick">填充</el-button>
-      <el-button type="text" class="el-icon-refresh-left">撤销</el-button>
-      <el-button type="text">获取标注数据</el-button>
-      <el-button class="btn btn-default">涂抹</el-button>
-      <el-button class="btn btn-default">擦除</el-button>
-      <el-button class="btn btn-default" >获取rle数据</el-button>
+      <a-button type="text" class="el-icon-thumb">平移</a-button>
+      <a-button type="text" class="el-icon-location-outline">注记</a-button>
+      <a-button type="text" class="el-icon-more-outline">点</a-button>
+      <a-button type="text" class="el-icon-minus">线段</a-button>
+      <a-button type="text" class="el-icon-share">多段线</a-button>
+      <a-button type="text" class="el-icon-orange">圆</a-button>
+      <a-button type="text" class="el-icon-full-screen">矩形</a-button>
+      <a-button type="text" class="el-icon-house">多边形</a-button>
+      <a-button type="text" class="el-icon-magic-stick">填充</a-button>
+      <a-button type="text" class="el-icon-refresh-left">撤销</a-button>
+      <a-button type="text">获取标注数据</a-button>
+      <a-button class="btn btn-default">涂抹</a-button>
+      <a-button class="btn btn-default">擦除</a-button>
+      <a-button class="btn btn-default" >获取rle数据</a-button>
     </div>
     <div style="flex: 1;">
       <div id="mapContainer" class="map-container"></div>

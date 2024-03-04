@@ -1,5 +1,5 @@
-import { request } from '../request.ts'
-import { UserResponse } from './type.ts'
+import { request } from "@/api/request"
+import { UserResponse } from "@/api/user/type"
 
 export const getUsers = () => {
   return request<Array<UserResponse>>({

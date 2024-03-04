@@ -1,5 +1,3 @@
-import { Ref } from "vue"
-
 export type AiLabelMapOptionsType = {
   container: string
   imageSrc: string
@@ -16,4 +14,27 @@ export enum AI_LABEL_MAP_MODE_ENUM {
   POLYGON = "POLYGON", //多边形
   DRAW_MASK = "DRAWMASK", //涂抹
   CLEAR_MASK = "CLEARMASK" //擦除
+}
+
+
+export enum THEME_ENUM {
+  DEFAULT = "default",
+  DARK = "dark",
+  LIGHT = "light",
+  GREEN = "green",
+  BLUE = "blue",
+  PURPLE = "purple",
+  RED = "red",
+  ORANGE = "orange",
+  YELLOW = "yellow",
+  BLACK = "black",
+  WHITE = "white"
+}
+
+
+export enum LOCAL_TYPE {
+  EN = "en",
+  ZH = "zh",
+  JA = "ja",
+  CN = "cn"
 }

@@ -1,6 +1,8 @@
-import { loadElementPlus } from "@/plugins/element-plus"
 import { App } from "vue"
+import { loadAntdPlus } from "@/plugins/antd-plus"
+// import { loadSvg } from "@/plugins/svg-plus"
 
 export function loadPlugins(app: App) {
-  loadElementPlus(app)
+  // loadSvg(app)
+  loadAntdPlus(app)
 }
