@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import { onMounted } from "vue"
-  import { AiLabelMap } from "@/components/aiLabel/AiLabelMap"
+  import { AiLabelMap } from "@/components/ai-label/AiLabelMap"
 
   onMounted(() => {
     AiLabelMap.initialize({

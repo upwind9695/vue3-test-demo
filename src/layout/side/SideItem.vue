@@ -64,7 +64,6 @@ const resolvePath = (routePath: string) => {
     <a-sub-menu v-else :index="resolvePath(props.itemData.path)" teleported>
       <template>
         <svg-icon  v-if="props.itemData.meta?.svgIcon" :name="props.itemData.meta.svgIcon" />
-        <svg-icon name="logo"/>
         <span v-if="props.itemData.meta?.title">{{ props.itemData.meta.title }}</span>
       </template>
       <template v-if="props.itemData.children">

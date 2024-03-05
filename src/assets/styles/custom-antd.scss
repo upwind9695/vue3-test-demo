@@ -48,3 +48,30 @@
   }
 }
 
+//.ant-menu-light.ant-menu-inline>div {
+//  position: relative;
+//  &::after {
+//    position: absolute;
+//    content: '';
+//    width: 30px;
+//    height: 30px;
+//    line-height: 100px;
+//    display: block;
+//    text-align: center;
+//    background-image: radial-gradient(200px at 0px 30px , #fff 30px, transparent 30px);
+//    top : 40px;
+//    right: 0;
+//  }
+//  &::before {
+//    position: absolute;
+//    content: '';
+//    width: 30px;
+//    height: 30px;
+//    line-height: 100px;
+//    display: block;
+//    text-align: center;
+//    background-image: radial-gradient(200px at 0px 30px , #fff 30px, transparent 30px);
+//    top : 0;
+//    right: 0;
+//  }
+//}

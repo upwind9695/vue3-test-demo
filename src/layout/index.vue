@@ -8,6 +8,7 @@ import OcrHeader from '@/layout/header/index.vue'
 import { useUserStoreHook } from "@/stores/modules/user"
 import { useAppStoreHook } from '@/stores/modules/app'
 import { useI18n } from 'vue-i18n'
+import TextOverflow from "@/components/text-overflow/TextOverflow.vue";
 const user = useUserStoreHook()
 const app = useAppStoreHook()
 const {t} = useI18n()
@@ -16,6 +17,7 @@ const collapsed = ref<boolean>(false)
 </script>
 <template>
   <a-layout class="app-wrap">
+
     <a-layout-sider width="251px" class="app-side" v-model:collapsed="collapsed" collapsible collapsed-width="80px" theme="light">
       <ocr-logo :collapsed="collapsed"/>
       <side-bar :menu-list="constantRoutes"/>

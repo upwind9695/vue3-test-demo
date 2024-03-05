@@ -14,9 +14,9 @@ const props = defineProps({
 
 const defaultSelectedKeys = ref(['1'])
 const defaultOpenKeys = ref(['1'])
-function handleSelect({ key }) {
-  console.log('Selected:', key)
-  router.push({ path: key })
+function handleSelect({key, item}) {
+  defaultSelectedKeys.value = key
+  router.push({ path: item.index })
 }
 </script>
 <script lang="ts">
