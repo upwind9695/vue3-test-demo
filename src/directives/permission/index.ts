@@ -1,7 +1,5 @@
 import { type Directive } from "vue"
 import { useUserStoreHook } from "@/stores/modules/user"
-
-/** 权限指令 */
 export const permission: Directive = {
   mounted(el, binding) {
     const { value } = binding

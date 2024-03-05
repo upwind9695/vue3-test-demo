@@ -23,10 +23,10 @@ const creatService = () => {
           break
         case HttpStatusCode.Unauthorized: // 401
           break
-        case HttpStatusCode.Forbidden: // 403
+        case HttpStatusCode.Forbidden: // error-page
           error.message = '拒绝访问'
           break
-        case HttpStatusCode.NotFound: // 404
+        case HttpStatusCode.NotFound: // not-found
           error.message = '请求地址出错'
           break
         case HttpStatusCode.MethodNotAllowed: // 405

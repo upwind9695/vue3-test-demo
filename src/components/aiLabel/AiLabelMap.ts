@@ -1,5 +1,6 @@
 import AILabel from 'ailabel'
-import { AI_LABEL_MAP_MODE_ENUM, AiLabelMapOptionsType } from "@/constants/type"
+import { AI_LABEL_MAP_MODE_ENUM } from "@/constants/enum"
+import { AiLabelMapOptionsType  } from "@/constants/type"
 export class AiLabelMap {
   container: string = ""
   imageSrc: string = ""

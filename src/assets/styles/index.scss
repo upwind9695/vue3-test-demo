@@ -1,0 +1,10 @@
+// 全局 CSS 变量
+@import "./variables.module.scss";
+// 全局mixins样式变量
+@import "./mixins.scss";
+// Transition
+@import "./transition.scss";
+// 自定义的antd样式
+@import "./custom-antd.scss";
+// 自定义的公共的样式
+@import "./common.scss";

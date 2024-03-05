@@ -4,12 +4,23 @@ import { getUserById } from './api/user'
 import { useUserStoreHook } from "@/stores/modules/user"
 import zhCN from 'ant-design-vue/lib/locale/zh_CN'
 import enUS from 'ant-design-vue/lib/locale/en_US'
+import jaJP from 'ant-design-vue/lib/locale/ja_JP'
 import "moment/locale/zh-cn"
-import { LOCAL_TYPE } from "@/constants/type"
-import AppMain from "@/layout/AppMain.vue"
+import moment from 'moment'
+import { LOCAL_TYPE } from '@/constants/enum'
 const user = useUserStoreHook()
+moment.locale('zh-cn')
 const locale = computed(() => {
-  return user.local === LOCAL_TYPE.EN ? enUS: zhCN
+  switch (user.local) {
+    case LOCAL_TYPE.ZH:
+      return zhCN
+    case LOCAL_TYPE.EN:
+      return enUS
+    case LOCAL_TYPE.JA:
+      return jaJP
+    default:
+      return enUS
+  }
 })
 onMounted(async () => {
   const u = await getUserById(1)
@@ -21,7 +32,7 @@ onMounted(async () => {
 
 <template>
   <a-config-provider :theme="user.themeConfig" :locale="locale">
-    <AppMain/>
+    <RouterView/>
   </a-config-provider>
 </template>
 

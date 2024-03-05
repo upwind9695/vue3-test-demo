@@ -2,10 +2,10 @@ import { defineStore } from 'pinia'
 import { computed, ref } from "vue"
 import SecureLS from 'secure-ls'
 import { StorageLike } from 'pinia-plugin-persistedstate'
-import { LOCAL_TYPE, THEME_ENUM } from "@/constants/type"
 import store from "@/stores"
 import { theme } from 'ant-design-vue'
 import { DARK_THEME, LIGHT_THEME } from "@/config";
+import { LOCAL_TYPE, THEME_ENUM } from '@/constants/enum'
 const ls = new SecureLS({ isCompression: true, encryptionSecret: '38c31684-d00d-30dc-82e0-fad9eec46d1d' })
 const st: StorageLike = {
   setItem(key: string, value: string) {
@@ -26,7 +26,7 @@ const useUserStore = defineStore(
     const themeName = ref<THEME_ENUM>(THEME_ENUM.LIGHT) // 主题名称
     const roles = ref<Array<string>>([])
     const mode = computed(() => {
-      document.documentElement.setAttribute('data-dark', modeName.value)
+      document.documentElement.setAttribute('data-mode', modeName.value)
       document.documentElement.setAttribute('style', `color-scheme: ${modeName.value}`)
       return modeName.value
     })
